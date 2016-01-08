@@ -8,6 +8,21 @@
  *
  */
 
+
+function createAdder(baseNum) {
+      return function(numberToAdd) {
+            return baseNum + numberToAdd;
+      }
+}
+
+
+var addTen = createAdder(10);
+console.log(addTen(2)); //12
+console.log(addTen(0)); //10
+
+
+
+
 // var age = 24;
 //
 // console.log(age);
@@ -22,6 +37,15 @@
 // console.log(age);
 
 
+
+
+
+
+
+
+
+
+/*
 function greetMaker(name) {
       function greet() {
             console.log('Hello ' + name + '!');
@@ -30,5 +54,9 @@ function greetMaker(name) {
 }
 
 var greetAli = greetMaker('Ali');
+*/
 
-const secret = (msg) => () => msg;
+
+
+
+//const secret = (msg) => () => msg;
