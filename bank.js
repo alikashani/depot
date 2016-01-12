@@ -28,6 +28,7 @@ var food = {
 food.starch = 'potato';
 food.favorites = ['pizza', 'cacio e pepe', 'rigatoni ragu', 'cheeseburger', 'cucumber'];
 
+// console.log(food);
 
 // HURRAY FOR ARRAY!
 

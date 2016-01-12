@@ -15,13 +15,9 @@ function createAdder(baseNum) {
       }
 }
 
-
 var addTen = createAdder(10);
 console.log(addTen(2)); //12
 console.log(addTen(0)); //10
-
-
-
 
 // var age = 24;
 //
@@ -32,18 +28,8 @@ console.log(addTen(0)); //10
 //       age = 0;
 //       console.log(age);
 // }
-
 // localFunction();
 // console.log(age);
-
-
-
-
-
-
-
-
-
 
 /*
 function greetMaker(name) {
@@ -54,9 +40,4 @@ function greetMaker(name) {
 }
 
 var greetAli = greetMaker('Ali');
-*/
-
-
-
-
-//const secret = (msg) => () => msg;
+*///const secret = (msg) => () => msg;
