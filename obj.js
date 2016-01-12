@@ -54,3 +54,7 @@ var ali = fromPrototype(man, {
 console.log(ali);
 console.log(ali.sex);
 console.log(ali.toString());
+
+var liver = fromPrototype(ali, {
+      condition: 'healthy'
+})
