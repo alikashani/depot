@@ -57,4 +57,6 @@ console.log(ali.toString());
 
 var liver = fromPrototype(ali, {
       condition: 'healthy'
-})
+});
+
+console.log(liver);
