@@ -60,3 +60,11 @@ var liver = fromPrototype(ali, {
 });
 
 console.log(liver);
+
+var food = {
+      junk: ['pizza', 'cheeseburger', 'chips', 'candy', 'ice cream'],
+      herbs: ['cilantro', 'parsley', 'basil', 'dill'],
+      bread: ['sourdough', 'bagette', 'whole wheat', 'white']
+}
+
+console.log(food.junk);
