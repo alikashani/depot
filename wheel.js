@@ -15,8 +15,6 @@ function addTwo(add2, add3) {
             return uno + dos;
       }
 
-
-
       function add3(uno, dos, tres) {
             return uno + dos + tres;
       }
