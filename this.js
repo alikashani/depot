@@ -1,5 +1,16 @@
-function hello(thing) {
-      console.log(this + ' says hello ' + thing);
+var person = {
+      name: 'Ali Kashani',
+      hello: function(thing) {
+            console.log(this.name + ' says hello ' + thing + '!');
+      }
 }
 
-hello.call('Ali', 'orange');
+// var bind = function(func, thisValue) {
+//       return function() {
+//             return func.apply(thisValue, arguments);
+//       }
+// }
+
+var boundHello = person.hello.bind(person);
+
+boundHello('world');
