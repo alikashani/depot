@@ -1,6 +1,6 @@
 /**
  *
- * WHEEL OF LIFE
+ *   WHEEL OF LIFE
  * -- Ali Kashani --
  * >>>> 2016 <<<<
  *
@@ -20,8 +20,6 @@ function addTwo(add2, add3) {
       }
 
       return add3(1, 2, 3) + add2(5, 10);
-
-
 }
 
 console.log(addTwo());
