@@ -23,3 +23,15 @@ function addTwo(add2, add3) {
 }
 
 console.log(addTwo());
+
+
+function fac(n) {
+      if (n == 0)
+            return 1;
+      else
+            return fac(n-1) * n;
+}
+
+console.log(fac(4));
+
+console.log(fac(3));
