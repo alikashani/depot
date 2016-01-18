@@ -14,6 +14,8 @@
 //       configurable: true
 // });
 
+'use strict'
+
 var config = {
       writable: true,
       enumerable: true,
@@ -51,12 +53,14 @@ var ali = fromPrototype(man, {
       lastName: 'Kashani'
 });
 
-console.log(ali);
-console.log(ali.sex);
-console.log(ali.toString());
+// console.log(ali);
+// console.log(ali.sex);
+// console.log(ali.toString());
 
 var liver = fromPrototype(ali, {
       condition: 'healthy'
 });
 
-console.log(liver);
+// console.log(liver);
+
+const makeFruit = (taste, amount, color) => ({ taste, amount, color })
