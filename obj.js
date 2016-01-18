@@ -61,6 +61,18 @@ var liver = fromPrototype(ali, {
       condition: 'healthy'
 });
 
+<<<<<<< HEAD
 // console.log(liver);
 
 const makeFruit = (taste, amount, color) => ({ taste, amount, color })
+=======
+console.log(liver);
+
+var food = {
+      junk: ['pizza', 'cheeseburger', 'chips', 'candy', 'ice cream'],
+      herbs: ['cilantro', 'parsley', 'basil', 'dill'],
+      bread: ['sourdough', 'bagette', 'whole wheat', 'white']
+}
+
+console.log(food.junk);
+>>>>>>> e5604506bdf1778e3eab0c7eff03ba835dbbf0c3
