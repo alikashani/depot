@@ -7,9 +7,9 @@ var animals = [
   { name: 'Jimmy', species: 'fish' },
 ];
 
-var dog = animals.filter(function(animal) {
-      return animal.species === 'dog'
-})
+const isDog = (animal) => { return animal.species === 'dog' }
+
+const dog = animals.filter(isDog);
 
 console.log(dog);
 
