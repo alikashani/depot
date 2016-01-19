@@ -11,7 +11,7 @@ const isDog = (animal) => { return animal.species === 'dog' }
 
 const dog = animals.filter(isDog);
 
-console.log(dog);
+console.log(typeof animals[1]);
 
 /*
 var dog = [];
