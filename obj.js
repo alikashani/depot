@@ -65,7 +65,7 @@ var liver = fromPrototype(ali, {
 // console.log(liver);
 
 const makeFruit = (taste, amount, color) => ({ taste, amount, color })
-=======
+
 console.log(liver);
 
 var food = {
