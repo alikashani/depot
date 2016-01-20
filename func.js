@@ -7,11 +7,15 @@ var animals = [
   { name: 'Jimmy', species: 'fish' },
 ];
 
-const isDog = (animal) => { return animal.species === 'dog' }
 
-const dog = animals.filter(isDog);
+const dog = animals.filter((animal) => { return animal.species === 'dog' });
 
-console.log(typeof animals[1]);
+console.log(dog);
+
+const names = animals.map((x) => x.name);
+
+console.log(names);
+
 
 /*
 var dog = [];
