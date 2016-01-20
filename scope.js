@@ -19,6 +19,14 @@ var addTen = createAdder(10);
 console.log(addTen(2)); //12
 console.log(addTen(0)); //10
 
+const getSecret = (secret) => {
+      return {
+            get: () => secret
+      };
+};
+
+
+
 // var age = 24;
 //
 // console.log(age);
@@ -40,4 +48,13 @@ function greetMaker(name) {
 }
 
 var greetAli = greetMaker('Ali');
-*///const secret = (msg) => () => msg;
+*/
+const secret = (msg) => () => msg;
+
+// translates to
+
+const secret = function(msg) {
+      return function() {
+            return msg;
+      }
+}
