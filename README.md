@@ -1,3 +1,10 @@
-# repo-depot
+WELCOME TO REPO-DEPOT!
 
-testtest
+___________________________
+___________________________
+
+Basically my practice arena
+___________________________
+Thanks for stopping by!
+
+<<<<<<<<<<<<<<>>>>>>>>>>>>>>
