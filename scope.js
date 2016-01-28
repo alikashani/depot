@@ -55,6 +55,6 @@ const secret = (msg) => () => msg;
 
 const secret = function(msg) {
       return function() {
-            return msg;
+            return msg
       }
 }
