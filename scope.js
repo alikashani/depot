@@ -53,8 +53,8 @@ const secret = (msg) => () => msg;
 
 // translates to
 
-const secret = function(msg) {
-      return function() {
-            return msg
-      }
+var sum = 0;
+
+for (var i = 1; i <= 100; i++) {
+	sum += i - 1;
 }
