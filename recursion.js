@@ -16,23 +16,24 @@ const categories = [
 	{ id: 'chihuahua', 'parent': 'dogs' },
 	{ id: 'labrador', 'parent': 'dogs' },
 	{ id: 'persian', 'parent': 'cats' },
-	{ id: 'siamese', 'parent': 'cats' }
+	{ id: 'siamese', 'parent': 'cats' },
+	{ id: 'pit bull', 'parent': 'dogs' },
+	{ id: 'tabby', 'parent': 'cats' }
 ]
 
 let makeTree = (categories, parent) => {
 	let node = {}
 	categories
 		.filter(c => c.parent === parent)
-		.forEach(c => node[c.id] =
-			makeTree(categories, c.id))
+		.forEach(c => node[c.id] = makeTree(categories, c.id))
 	return node
 }
 
 
-let treeOne = JSON.stringify(makeTree(categories, null), null, 2)
+let treeOne = JSON.stringify(makeTree(categories, null), null, 4)
 
 console.log(treeOne)
-console.log(JSON.parse(treeOne))
+
 
 // { // what we're trying to acheive
 // 	animals: {
