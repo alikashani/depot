@@ -28,14 +28,13 @@ let makeTree = (categories, parent) => {
 	return node
 }
 
-console.log(
-	JSON.stringify(
-		makeTree(categories, null),
-		null, 2)
-)
 
+let treeOne = JSON.stringify(makeTree(categories, null), null, 2)
 
-// {
+console.log(treeOne)
+console.log(JSON.parse(treeOne))
+
+// { // what we're trying to acheive
 // 	animals: {
 // 		mammals: {
 // 			chihuahua: null
