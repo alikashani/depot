@@ -2,27 +2,27 @@
 
 import _ from 'lodash'
 
-// let dragon =
-// 	name =>
-// 		size =>
-// 			element =>
-// 				name + ' is a ' +
-// 				size + ' dragon that breathes ' +
-// 				element + '!'
-//
-// console.log(dragon('fluffy')('tiny')('light'))
+let dragon =
+	name =>
+		size =>
+			element =>
+				name + ' is a ' +
+				size + ' dragon that breathes ' +
+				element + '!'
 
-// let dragon = (name, size, element) =>
-// 	name + ' is a ' +
-// 	size + ' dragon that breathes ' +
-// 	element + '!'
-//
-// dragon = _.curry(dragon)
-//
-// let fluffykinsDragon = dragon('fluffykins')
-// let tinyDragon = fluffykinsDragon('tiny')
-//
-// console.log(tinyDragon('death'))
+console.log(dragon('fluffy')('tiny')('light'))
+
+let dragon = (name, size, element) =>
+	name + ' is a ' +
+	size + ' dragon that breathes ' +
+	element + '!'
+
+dragon = _.curry(dragon)
+
+let fluffykinsDragon = dragon('fluffykins')
+let tinyDragon = fluffykinsDragon('tiny')
+
+console.log(tinyDragon('death'))
 
 const dragons = [
 	{ name: 'fluffykins', element: 'lightning' },
