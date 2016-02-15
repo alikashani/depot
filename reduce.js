@@ -12,7 +12,7 @@ const orders = [
       console.log(totalAmount);
  */
 
-var totalAmount = orders.reduce((sum, order) => sum + order.amount, -1075);
+var totalAmount = orders.reduce( (sum, order) => sum + order.amount, 0 );
 console.log(totalAmount)
 
 var output = fs.readFileSync('data.txt', 'utf8')
