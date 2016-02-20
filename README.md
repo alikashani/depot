@@ -1,10 +1,7 @@
 WELCOME TO REPO-DEPOT!
-
+---------------------------
 ___________________________
-___________________________
-
-Basically my practice arena
-___________________________
+Here you will find several files containing code I've written for practice.
 Thanks for stopping by!
-
+ - Ali
 <<<<<<<<<<<<<<>>>>>>>>>>>>>>
