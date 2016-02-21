@@ -51,10 +51,12 @@ var greetAli = greetMaker('Ali');
 */
 const secret = (msg) => () => msg;
 
-// translates to
+// translates to:
 
-var sum = 0;
-
-for (var i = 1; i <= 100; i++) {
-	sum += i - 1;
-}
+/*
+      const secret = function(msg) {
+            return function() {
+                  return msg
+            }
+      }
+*/
