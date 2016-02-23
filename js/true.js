@@ -2,8 +2,8 @@ const fs = require('fs');
 
 var output = fs.readFileSync('data.txt', 'utf8')
 	.trim()
-	.split('\r\n')
-	.map( line => line.split('\t'))
+	.split('\n') // Windows requires \r\n
+	.map( line => line.split('\t') )
 	.reduce( (customers, line) => {
 		customers[line[0]] = customers[line[0]] || []
 		customers[line[0]].push({
