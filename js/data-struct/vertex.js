@@ -1,6 +1,5 @@
 (function (exports) {
       'use strict';
-
       /**
        * >>> Cloned from mgechev <<<
        * >>> for personal studying purposes <<<
