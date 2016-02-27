@@ -41,5 +41,6 @@
                   factor += 6;
 
             return true;
-            }
-      }(typeof exports === 'undefined' ? window : exports));
+      }
+	
+}(typeof exports === 'undefined' ? window : exports));
