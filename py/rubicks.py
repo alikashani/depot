@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# cloned from jklaw90 (Julian Lawrence)
 
 class RubicksCube2x2:
     squares = 2
