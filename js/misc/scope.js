@@ -1,10 +1,9 @@
 /*
- *
- *
+ * ==================================
+ * ----------------------------------
  * Let's talk about CLOSURES && SCOPE
  * ----------------------------------
  * ==================================
- *
  *
  */
 
@@ -12,7 +11,7 @@
 function createAdder(baseNum) {
       return function(numberToAdd) {
             return baseNum + numberToAdd;
-      }
+      };
 }
 
 var addTen = createAdder(10);
@@ -20,9 +19,7 @@ console.log(addTen(2)); //12
 console.log(addTen(0)); //10
 
 const getSecret = (secret) => {
-      return {
-            get: () => secret
-      };
+      return { get: () => secret; };
 };
 
 
