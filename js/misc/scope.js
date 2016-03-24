@@ -19,7 +19,7 @@ console.log(addTen(2)); //12
 console.log(addTen(0)); //10
 
 const getSecret = (secret) => {
-      return { get: () => secret; };
+      return { get: () => secret };
 };
 
 

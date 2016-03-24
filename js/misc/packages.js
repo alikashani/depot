@@ -16,3 +16,14 @@ var rolodex = binderFullOfNames.sort((a, b) => {
 });
 
 console.log(binderFullOfNames);
+
+function fn(a){
+	if (typeof(a) != 'number') console.log('invalid type');
+	return a + 2;
+}
+
+var ali = 20;
+
+var nAli = fn(ali);
+
+console.log(nAli);
