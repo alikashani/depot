@@ -1,15 +1,15 @@
 const fs = require('fs');
 const orders = [
-      { amount: 250 },
-      { amount: 400 },
-      { amount: 100 },
-      { amount: 325 },
+	{ amount: 250 },
+	{ amount: 400 },
+    { amount: 100 },
+    { amount: 325 },
 ];
 
 /*
-      let totalAmount = 0;
-      for (let i = 0; i < orders.length; i++) { totalAmount += orders[i].amount; }
-      console.log(totalAmount);
+	let totalAmount = 0;
+	for (let i = 0; i < orders.length; i++) { totalAmount += orders[i].amount; }
+	console.log(totalAmount);
  */
 
 var totalAmount = orders.reduce( (sum, order) => sum + order.amount, 0 );
@@ -17,25 +17,25 @@ console.log(totalAmount)
 
 var output = fs.readFileSync('data.txt', 'utf8')
 
-      .trim()
-      .split('\r\n')
-      .map( line => line.split('\t') )
+    .trim()
+    .split('\r\n')
+    .map( line => line.split('\t') )
 
-      .reduce( (customers, line) => {
+	.reduce( (customers, line) => {
 
-            customers[line[0]] = customers[line[0]] || []
+        customers[line[0]] = customers[line[0]] || [];
 
-            customers[line[0]].push({
+        customers[line[0]].push({
 
-                  name: line[1],
-                  price: line[2],
-                  quantity: line[3]
+			name: line[1],
+			price: line[2],
+			quantity: line[3]
 
-            })
+        });
 
-            return customers
+        return customers;
 
-      }, {})
+    }, {});
 
 
 

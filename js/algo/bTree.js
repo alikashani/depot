@@ -49,8 +49,8 @@ BinaryTree.prototype.lookup = (node, target) => {
 
  BinaryTree.prototype.insert = (node, data) => {
 	// if the node is null return a new node
-	if (node == null) {
-		return new Node(data)
+	if (node === null) {
+		return new Node(data);
 	} else {
 		// otherwise recur down the treeOne
 		if (data <= node.data)
