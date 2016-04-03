@@ -74,7 +74,7 @@ function getAccount(username) {
 
 
 function deposit(acc, amt) {
-    if (typeof amt === 'number')
+	if (typeof amt === 'number')
 		return acc.balance += amt;
 	else
 		console.log('You can only deposit numbers!');
