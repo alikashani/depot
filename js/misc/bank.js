@@ -10,23 +10,23 @@
 // Pretty dope object
 
 var food = {
-      "vegetables" : {
-            green : ['celery', 'lettuce', 'cucumber'],
-            red : ['tomato', 'radish', 'beets']
-      },
-
-      "herbs" : ['cilantro', 'thyme', 'parsley', 'mint'],
-
-      "fruits" : {
-            "apples" : ['granny smith', 'fuji', 'dope'],
-            "berries" : ['strawberry', 'raspberry', 'blueberry', 'grapes'],
-            "citrus" : ['orange', 'tangerine', 'grapefruit', 'lemon', 'lime'],
-            "melons" : ['watermelon', 'cantolope', 'honeydew']
-      }
+	"vegetables" : {
+	    green : ['celery', 'lettuce', 'cucumber'],
+	    red : ['tomato', 'radish', 'beets']
+	},
+	"herbs" : ['cilantro', 'thyme', 'parsley', 'mint'],
+	"fruits" : {
+	    "apples" : ['granny smith', 'fuji', 'dope'],
+	    "berries" : ['strawberry', 'raspberry', 'blueberry', 'grapes'],
+	    "citrus" : ['orange', 'tangerine', 'grapefruit', 'lemon', 'lime'],
+	    "melons" : ['watermelon', 'cantolope', 'honeydew']
+	}
 }
 
 food.starch = 'potato';
-food.favorites = ['pizza', 'cacio e pepe', 'rigatoni ragu', 'cheeseburger', 'cucumber'];
+food.favorites = [
+	'pizza', 'cacio e pepe', 'rigatoni ragu', 'cheeseburger', 'cucumber'
+];
 
 // console.log(food);
 
@@ -39,7 +39,7 @@ food.favorites = ['pizza', 'cacio e pepe', 'rigatoni ragu', 'cheeseburger', 'cuc
 var grades = [100, 50, 75];
 var totalGrade = 0;
 
-grades.forEach((x) => { totalGrade += x });
+grades.forEach( x => totalGrade += x );
 
 var avg = totalGrade / grades.length;
 //console.log('Average grade is ' + avg);
@@ -49,60 +49,58 @@ var avg = totalGrade / grades.length;
 var accounts = [];
 
 function createAccount(account) {
-      accounts.push(account);
-      return account;
+	accounts.push(account);
+	return account;
 }
 
 
 function getAccount(username) {
-      var matchedAccount;
+	var matchedAccount;
+	for (var i = 0; i < accounts.length; i++){
+	    if (accounts[i].username === username) {
+	        matchedAccount = accounts[i];
+	    }
+	}
 
-      for (var i = 0; i < accounts.length; i++){
-            if (accounts[i].username === username) {
-                  matchedAccount = accounts[i];
-            }
-      }
-
-      /*
-      accounts.forEach(function(account) {
-            if (account.username === username) {
-                  matchedAccount = account;
-            }
-      });
-      */
-      return matchedAccount;
+	/*
+	accounts.forEach(function(account) {
+	    if (account.username === username) {
+	        matchedAccount = account;
+	    }
+	});
+	*/
+	return matchedAccount;
 }
 
 
 function deposit(acc, amt) {
-      if (typeof amt === 'number') {
-            return acc.balance += amt;
-      } else {
-            console.log('You can only deposit numbers!');
-      }
+    if (typeof amt === 'number')
+		return acc.balance += amt;
+	else
+		console.log('You can only deposit numbers!');
 }
 
 function withdraw(acc, amt) {
-      if (typeof amt === 'number') {
-            return acc.balance -= amt;
-      } else {
-            console.log('You can only withdraw numbers!');
-      }
+	if (typeof amt === 'number')
+	    return acc.balance -= amt;
+	else {
+	    console.log('You can only withdraw numbers!');
+	}
 }
 
 function getBalance(acc) {
-      console.log(acc.balance)
+    console.log(acc.balance)
 }
 
 function createBalanceGetter(account) {
-      return function() {
-            return account.balance;
-      }
+	return function() {
+	    return account.balance;
+	}
 }
 
 var ali = createAccount({
-      username: 'Ali',
-      balance: 0
+	username: 'Ali',
+	balance: 0
 });
 
 deposit(ali, 1000);

@@ -34,6 +34,7 @@ let treeOne = JSON.stringify(makeTree(categories, null), null, 4)
 
 console.log(treeOne)
 
+
 let fact = (n) => {
 	if (n == 0)
 		console.log(1)
