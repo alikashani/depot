@@ -1,3 +1,4 @@
+// Functional programming basics - filter() & map()
 var animals = [
   { name: 'Fluffykins', species: 'rabbit' },
   { name: 'Caro', species: 'dog' },
@@ -7,46 +8,22 @@ var animals = [
   { name: 'Jimmy', species: 'fish' },
 ];
 
+// filter() returns new array w/ only desired items
+const notDog = animals.filter( animal => animal.species !== 'dog' )
+console.log(JSON.stringify(notDog, null, 4) + '\n')
 
-const dog = animals.filter((animal) => { return animal.species === 'dog' });
+// map() iterates over array & returns new array w/ each item tranformed
+const species = animals.map( x => x.species )
+console.log(species)
 
-console.log(dog);
+// Impure function
+const time = () => new Date().toLocaleTimeString();
+const regTime = () => new Date()
 
-const names = animals.map((x) => x.name);
+console.log(time())
+console.log(regTime())
 
-console.log(names);
+// Pure functionf
+const highpass = (cutoff, value) => value >= cutoff;
 
-
-/*
-var dog = [];
-
-for (var i = 0; i < animals.length; i++) {
-  if (animals[i].species === 'dog')
-    dog.push(animals[i])
-};
-
-console.log(dog)
-
-var isDog = function(animal){
-  return animal.species === 'dog'
-}
-var dogs = animals.filter(isDog)
-var otherAnimals = animals.map(isDog)
-
-
-
-console.log(dogs);
-console.log(otherAnimals)
-*/
-/*
-var names = [];
-for (var i = 0; i < animals.length; i++) {
-  names.push(animals[i].name);
-}
-*/
-
-// var names = animals.map(function(animal){
-//   return animal.name
-// });
-//
-// console.log(names)
+console.log(highpass(5, 5));
