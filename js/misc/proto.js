@@ -15,7 +15,6 @@ waffle.init('waffle')
 waffle.eat()
 
 const double = x => x * 2
-
 console.log(double(12))
 //
 // console.log('waffle is food', food.isPrototypeOf(waffle) + '\n')
