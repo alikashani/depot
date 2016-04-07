@@ -1,20 +1,23 @@
 const  food = {
-      init: function(type) {
-            this.type = type
-      },
-      eat: function() {
-            console.log('You ate the ' + this.type)
-      }
+    init: (type) => { this.type = type },
+    eat: () => { console.log('You ate the ' + this.type + '\n') }
 }
 
-const waffle = Object.create(food);
-waffle.init('waffle')
-
 const carrot = Object.create(food)
-carrot.init('carrot');
+const waffle = Object.create(food)
 
-console.log('waffle is food', food.isPrototypeOf(waffle));
+food.eat = () => { console.log('YOU TOTALLY ATE THE ' + this.type.toUpperCase()) }
 
-console.log('int is food', food.isPrototypeOf(12312));
+carrot.init('carrot')
+carrot.eat()
 
-console.log('carrot is food', food.isPrototypeOf(carrot));
+waffle.init('waffle')
+waffle.eat()
+
+const double = x => x * 2
+
+console.log(double(12))
+//
+// console.log('waffle is food', food.isPrototypeOf(waffle) + '\n')
+// console.log('int is food', food.isPrototypeOf(12312)+ '\n')
+// console.log('carrot is food', food.isPrototypeOf(carrot)+ '\n')
