@@ -1,9 +1,6 @@
 // Impure. Mutates existing cart
 const addToCart = (cart, item, quantity) => {
-	cart.items.push({
-		item,
-		quanitity
-	});
+	cart.items.push({ item,	quantity });
 	return cart;
 };
 
