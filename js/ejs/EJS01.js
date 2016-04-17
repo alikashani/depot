@@ -15,10 +15,8 @@ var mack = []
 mack.push('Mack')
 mack.push('the', 'Knife')
 console.log(mack)
-
 mack.join(" ")
 console.log(mack)
-
 mack.pop()
 console.log(mack)
 
@@ -32,7 +30,7 @@ console.log(day1.squirrel)
 console.log(day1.orange(day1.events))
 console.log(day1.events)
 
-var desc = {
+const desc = {
 	work: 'Went to work',
 	'touched tree': 'Touched a tree'
 }
