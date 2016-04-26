@@ -103,9 +103,9 @@ var JOURNAL = [
 if (typeof module != "undefined" && module.exports)
   module.exports = JOURNAL;
 
-addEntry(['work', 'touched tree', 'pizza', 'running', 'tv'], false)
-addEntry(['work', 'ice cream', 'cauliflower', 'lasagna', 'op'], false)
-addEntry(['weekend', 'cycling', 'break', 'peanuts', 'beer'], true)
+// addEntry(['work', 'touched tree', 'pizza', 'running', 'tv'], false)
+// addEntry(['work', 'ice cream', 'cauliflower', 'lasagna', 'op'], false)
+// addEntry(['weekend', 'cycling', 'break', 'peanuts', 'beer'], true)
 
 function phi(table) {
   return (table[3] * table[0] - table[2] * table[1]) /
@@ -124,7 +124,8 @@ function hasEvent(event, entry) {
 function tableFor(event, journal) {
   var table = [0, 0, 0, 0];
   for (var i = 0; i < journal.length; i++) {
-    var entry = journal[i], index = 0;
+    var entry = journal[i],
+				index = 0;
     if (hasEvent(event, entry)) index += 1;
     if (entry.squirrel) index += 2;
     table[index] += 1;
