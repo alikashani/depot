@@ -19,6 +19,7 @@ let mouse = () => {
 	})
 }
 
+
 let james = mouse()
 
 console.log(james.profession())
