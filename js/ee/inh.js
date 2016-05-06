@@ -4,7 +4,7 @@ let animal = {
 	animalType: 'animal',
 	describe () {
 		return `An ${this.animalType}, with ${this.furColor} fur,
-			${this.legs} legs and a ${this.tail} tail`;
+			${this.legs} legs and a ${this.tail} tail`
 	}
 }
 
@@ -15,12 +15,10 @@ let mouse = () => {
 		furColor: 'brown',
 	  legs: 4,
 	  tail: 'long, skinny',
-		profession () {
-			return secret;
-		}
-	});
-};
+		profession () {	return secret }
+	})
+}
 
-let james = mouse();
+let james = mouse()
 
-console.log(james.profession());
+console.log(james.profession())
