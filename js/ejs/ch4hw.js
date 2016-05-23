@@ -43,4 +43,16 @@ function reverseArray(arr) {
   return revArr;
 }
 
+function reverseArrInPlace(arr) {
+  for (let i = 0; i < Math.floor(arr.length / 2); i++) {
+    let temp = arr[i];
+    arr[i] = arr[arr.length - 1 - i];
+    arr[arr.length - 1 - i] = temp;
+  }
+  return arr;
+}
+
 console.log(reverseArray(range(1, 10)));
+console.log(reverseArrInPlace(range(1,10)));
+
+// Exercise 3
