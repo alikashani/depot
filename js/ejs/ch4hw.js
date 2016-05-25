@@ -56,3 +56,8 @@ console.log(reverseArray(range(1, 10)));
 console.log(reverseArrInPlace(range(1,10)));
 
 // Exercise 3
+function arrToList(arr) {
+  let list = {};
+  list.value = arr[0];
+  list.rest = {};
+}
