@@ -8,12 +8,23 @@ html
     link(rel="stylesheet", href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css")
     link(rel="stylesheet", href="css/main.css")
   body
-    
     main
-      h1 
-        span Good at 
-        span business?
       a.cta(href="") Learn More now <i class="ion-chevron-right"></i>
+      h1 
+        span Good at
+        br
+        span business?
+      
+    .overlay
+      .modal
+        .close-btn: <i class = "ion-close-round"></i>
+        .text-box
+          p.lead Business stuff in your inbox, all the time.
+          p Sign up for our newsletter to download this 200 page words of business PDF.
+        .graphic
+        form
+          input(type="text", placeholder="Email Address")
+          input(type="submit")
   
   
   
