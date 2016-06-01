@@ -61,6 +61,10 @@
       $('.overlay').removeClass('is-open');
     });
 
+    $(window).scroll(function() {
+      $('.overlay').removeClass('is-open');
+    })
+
 
 
     // Initialize WOW.js Scrolling Animations
