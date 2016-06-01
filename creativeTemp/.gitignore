@@ -8,6 +8,9 @@ fonts/
 
 img/
 
-js/bootstrap.*.js
+js/bootstrap.js
+js/bootstrap.min.js
+js/classie.js
+js/cbpAnimatedHeader.js
 js/jquery.*
 js/wow.min.js
