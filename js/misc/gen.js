@@ -12,8 +12,8 @@ run(function *() {
   const title = post.title;
   return title
 })
-  .catch( error => console.error(error.stack))
-  .then( x => console.log('Run resulted in', x))
+.catch( error => console.error(error.stack))
+.then( x => console.log('Run resulted in', x))
 
 function run(generator) {
   const iterator = generator()
