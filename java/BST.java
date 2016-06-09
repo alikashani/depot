@@ -108,15 +108,15 @@ public class BST <T extends Comparable<T>> implements Iterable<T>
    private boolean search(Node<T> p, T toSearch)
    {
       if (p == null)
-         return false;
+          return false;
       else
-      if (compare(toSearch, p.data) == 0)
-      	return true;
-      else
-      if (compare(toSearch, p.data) < 0)
-         return search(p.left, toSearch);
-      else
-         return search(p.right, toSearch);
+          if (compare(toSearch, p.data) == 0)
+          	return true;
+          else
+              if (compare(toSearch, p.data) < 0)
+                 return search(p.left, toSearch);
+              else
+                 return search(p.right, toSearch);
    }
 
 /*****************************************************
