@@ -417,3 +417,12 @@ class MyComp1 implements Comparator<Integer>
         return y-x;
    }
 }
+
+class Node {
+  int val;
+  Node left, right;
+  public Node(int x) {
+         
+  }
+
+}
