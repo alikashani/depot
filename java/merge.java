@@ -34,15 +34,17 @@ public class mergeSort {
         int[] first = new int[list.length / 2];
         int[] secnd = new int[list.length - first.length];
         System.copyarray(list, 0, first, 0, first.length);
-        System.copyarray(list, first.length, second, 0, second.length);
+        System.copyarray(list, first.length, secnd, 0, secnd.length);
 
         mergeSort(first);
         mergeSort(secnd);
-        merge(first, second, list);
+        merge(first, secnd, list);
         return list;
     }
 
     public static void main(String[] args) {
-      System.out.println();
+      int[] a = { 2, 6, 3, 5, 1 };
+      mergeSort(a);
+      System.out.println(Arrays.toString(a));
     }
 }
