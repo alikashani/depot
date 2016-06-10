@@ -1,0 +1,49 @@
+Back-end Developer (Irvine, CA)
+Spigen Inc - Irvine, CA
+    Spigen is hiring the very first database developer for our team,
+    and we want someone who gets a rush out of taking the lead and starting something new.
+
+    A Back-end Web Developer responsible for managing the interchange of data between the server
+    and the users.
+
+    Your primary focus will be development of all server-side logic, definition
+    and maintenance of the central database, and ensuring high performance and responsiveness
+    to requests from the front end.
+
+    You will also be responsible for integrating the front-end elements built by your co-workers into the application.
+
+    A basic understanding of front-end technologies is therefore necessary as well.
+
+General Description:
+
+    Integration of user facing elements developed by a frontend developers with server side logic
+    Building reusable code and libraries for future use
+    Optimization of the application for maximum speed and scalability
+    Implementation of security and data protection
+    Design and implementation of data storage solutions
+    Working with other team or team member
+
+Work Experience Requirements:
+
+    Experience with cloud services (ideally AWS).
+
+    Extensive knowledge about APIs. You can design RESTful services and integrate with other data providers,
+    and you know when to use JSON or XML.
+
+    Basic understanding of front-end technologies and platforms, such as JavaScript, HTML5, and CSS3
+    Good understanding of server side CSS preprocessors, such as LESS and SASS
+    Operating systems: Linux and Unix-like operating systems, Mac OS X, Windows Server
+    User authentication and authorization between multiple systems, servers, and environments
+    Integration of multiple data sources and databases into one system
+    Management of hosting environment, including database administration and scaling an application to support load changes
+    Data migration, transformation, and scripting
+    Setup and administration of backups
+    Security settings and hack prevents
+    Outputting data in different formats
+    Understanding differences between multiple delivery platforms such as mobile vs desktop, and optimizing output
+        to match the specific platform
+    Creating database schemas that represent and support business processes
+    Implementing automated testing platforms and unit tests
+    Server side programming languages—like Python, Perl, PHP, Ruby, and JavaScript, when implemented with
+        the server-side development environment, Node.js
+    Proficient understanding of code versioning tools, such as Git
