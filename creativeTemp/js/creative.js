@@ -52,8 +52,6 @@
       $('.overlay').removeClass('is-open');
     });
 
-    // Not properly working!
-    // Want modal to close ONLY when close-btn OR outside clicked
     $('.my-modal, .text-box').click(function(e) {
       e.stopPropagation();
     })
