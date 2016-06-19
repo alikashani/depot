@@ -45,11 +45,10 @@
     // Modal open / close
     $('.cta').click(function() {
       $('.overlay').addClass('is-open');
-      return false;
-    });
 
-    $('.close-btn').click(function() {
-      $('.overlay').removeClass('is-open');
+      // hide elements that overlap modal
+      $('#about-text').children().css('z-index', '-1');
+      return false;
     });
 
     $('.my-modal, .text-box').click(function(e) {
@@ -58,12 +57,17 @@
 
     $('.overlay').click(function() {
       $('.overlay').removeClass('is-open');
+      $('#about-text').children().css('z-index', '0');
     });
 
     $(window).scroll(function() {
       $('.overlay').removeClass('is-open');
-    })
+      $('#about-text').children().css('z-index', '0');
+    });
 
+    // $('.hover-zoom').click(() => {
+    //   $(this).css()
+    // });
 
 
     // Initialize WOW.js Scrolling Animations
