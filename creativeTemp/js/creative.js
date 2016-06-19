@@ -65,9 +65,9 @@
       $('#about-text').children().css('z-index', '0');
     });
 
-    // $('.hover-zoom').click(() => {
-    //   $(this).css()
-    // });
+    /*
+        qTip could be potentially nice tool for tooltipping.
+     */
 
 
     // Initialize WOW.js Scrolling Animations
