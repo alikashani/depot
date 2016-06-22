@@ -6,3 +6,5 @@ testApp/
 jobDesc.txt
 aws_users.json
 *.zip
+coursera/
+py/workspace/
