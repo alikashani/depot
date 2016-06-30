@@ -4,7 +4,7 @@
   <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
   <script>
 
-    var myCenter = new google.maps.LatLng(40.006694099999997, -105.2635152);
+    var myCenter = new google.maps.LatLng(33.006694099999997, -117.2635152);
     var marker;
 
     function initialize() {
@@ -18,7 +18,7 @@
 
       marker = new google.maps.Marker({
         position : myCenter,
-        animation : google.maps.Animation.BOUNCE
+        animation : google.maps.Animation.DROP
       });
 
       marker.setMap(map);

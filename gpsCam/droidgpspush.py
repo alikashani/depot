@@ -8,7 +8,7 @@ port = 12345
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-s.connect(("192.168.0.200", port)) # connect to pi as client
+s.connect(("192.168.0.102", port)) # connect to pi as client
 
 droid.makeToast("Starting location fetch!") # notify user of activity
 
