@@ -2,7 +2,7 @@
 import socket
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.bind(("192.168.0.200", 12345))
+sock.bind(("192.168.0.102", 12345))
 sock.listen(2)
 
 (client, (ip, port)) = sock.accept()
