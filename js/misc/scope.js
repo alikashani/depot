@@ -7,7 +7,6 @@
  *
  */
 
-
 function createAdder(baseNum) {
       return function(numberToAdd) {
             return baseNum + numberToAdd;

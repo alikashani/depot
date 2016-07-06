@@ -12,14 +12,14 @@
 var food = {
 	"vegetables" : {
 	    green : ['celery', 'lettuce', 'cucumber'],
-	    red : ['tomato', 'radish', 'beets']
+	    red :   ['tomato', 'radish', 'beets']
 	},
 	"herbs" : ['cilantro', 'thyme', 'parsley', 'mint'],
 	"fruits" : {
-	    "apples" : ['granny smith', 'fuji', 'dope'],
+	    "apples" :  ['granny smith', 'fuji', 'dope'],
 	    "berries" : ['strawberry', 'raspberry', 'blueberry', 'grapes'],
-	    "citrus" : ['orange', 'tangerine', 'grapefruit', 'lemon', 'lime'],
-	    "melons" : ['watermelon', 'cantolope', 'honeydew']
+	    "citrus" :  ['orange', 'tangerine', 'grapefruit', 'lemon', 'lime'],
+	    "melons" :  ['watermelon', 'cantolope', 'honeydew']
 	}
 }
 
@@ -29,9 +29,6 @@ food.favorites = [
 ];
 
 // console.log(food);
-
-// HURRAY FOR ARRAY!
-
 // var array = [true, false, 'orange', 21982, undefined, null];
 // array.pop();
 // array.forEach((val) => { console.log(val); });

@@ -24,7 +24,6 @@ function addTwo(add2, add3) {
 
 console.log(addTwo());
 
-
 function fac(n) {
       if (n == 0)
             return 1;
@@ -33,5 +32,4 @@ function fac(n) {
 }
 
 console.log(fac(4));
-
 console.log(fac(3));
