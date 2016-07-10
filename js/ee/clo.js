@@ -5,6 +5,7 @@ const getSecret = (secret) => {
 };
 
 var getSec = function(secret) {
+  var t = secret;
   var get = function() {
     return secret;
   }
@@ -13,6 +14,8 @@ var getSec = function(secret) {
 
 console.log(getSecret('orange').get())
 console.log(getSec('orange'));
+
+
 // test('Closure for object privacy.', assert => {
 //   const msg = '.get() should have access to the closure.';
 //   const expected = 1;

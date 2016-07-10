@@ -12,7 +12,5 @@ var person = {
 // }
 
 var boundHello = person.hello.bind(person);
-
 boundHello('world');
-
 var newHello = person.hello('there');
