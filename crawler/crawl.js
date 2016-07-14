@@ -30,6 +30,7 @@ function crawl() {
     // New page we haven't visited
     visitPage(nextPage, crawl);
   }
+  console.log(pagesVisited);
 }
 
 function visitPage(url, callback) {
@@ -72,16 +73,10 @@ function collectInternalLinks($) {
   let allAbsoluteLinks = [];
 
   let relativeLinks = $("a[href^='/']");
-
-  relativeLinks.each(() => {
-    allRelativeLinks.push($(this).attr('href'));
-  });
+  relativeLinks.each(() => { allRelativeLinks.push($(this).attr('href')) });
 
   let absoluteLinks = $("a[href^='http']");
-
-  absoluteLinks.each(() => {
-    allAbsoluteLinks.push($(this).attr('href'));
-  });
+  absoluteLinks.each(() => { allAbsoluteLinks.push($(this).attr('href')) });
 
   console.log("Found " + allRelativeLinks.length + " relative links");
   console.log("Found " + allAbsoluteLinks.length + " absolute links");
