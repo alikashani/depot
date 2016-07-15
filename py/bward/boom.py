@@ -8,5 +8,11 @@
 
         - Subsequent invocations of application should read from the same file
 
-        - Document code: must at least annotate functions
+        - Document code: must at least annotate functions with parameter types
+          and return values
+
+        - Include unit tests with instructions on how a continuous integrate
+          system will execute the tests
+
+        - Can only use FIRST ORDER libraries
 '''
