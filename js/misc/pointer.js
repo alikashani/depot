@@ -2,20 +2,23 @@
 // x and bar point to different values
 function foo(bar) {
 	bar++;
-	console.log(bar)
+	console.log('parameter passed after increment: '.toUpperCase(), bar)
 }
 
 var x = 5;
 foo(x);
-console.log(x);
+console.log('\nfoo is returning: '.toUpperCase() + x);
 
 // but here y is set to a pointer
 // and y and bar point to the SAME value
-function foo2(bar) {
-	bar[0]++;
-	console.log(bar[0]);
+function foo2(anArray) {
+	anArray[0]++;
+	console.log('\nfoo2 is returning: '.toUpperCase() + anArray[0]);
 }
+var myArray = [ 10, 20, 30 ];
+foo2(myArray)
+console.log(myArray);
 
-var y = [5];
-foo2(y);
-console.log(y[0])
+// var y = [5];
+// foo2(y);
+// console.log(y[0])
