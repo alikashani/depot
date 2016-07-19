@@ -1,17 +1,19 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "title": "Signed Identifier",
-    "description": "Signature for a provided arbitrary identifier",
-    "type": "object",
-    "required": [ "signature", "pubkey" ],
-    "properties": {
-        "signature": {
-            "type": "string",
-            "description": "Digital signature using the private key and the SHA256 digest of the input"
+    "maps": [
+        {
+            "id": "blabla",
+            "iscategorical": "0"
         },
-        "pubkey": {
-            "type": "string",
-            "description": "Base64 encoded string (PEM format) of the public key generated from the private key used to create the digital signature"
+        {
+            "id": "blabla",
+            "iscategorical": "0"
         }
+    ],
+    "masks": {
+        "id": "valore"
+    },
+    "om_points": "value",
+    "parameters": {
+        "id": "valore"
     }
 }

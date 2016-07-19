@@ -1,0 +1,44 @@
+Software Developer - SQL, C#, Python (Irvine, CA) hide this posting
+
+About Us
+
+We are an investment management firm based in Irvine, CA who believes that
+technology is a key driver to our success. Over the years, we have assembled a
+team of high caliber individuals who are sharp, curious, opinionated, humble,
+driven, and focused on getting things done. We pride ourselves in our team's
+ability to deliver exceptional results consistently year after year.
+
+Our Beliefs
+
+•	We focus on quality and stability over quantity
+•	We believe in rock star teams, not rock star individuals
+•	We like processes, but processes don't rule us
+•	We emphasize outcome over effort
+•	We are committed to a career, not just a job
+
+What you'll do
+
+•	Design and build complex, data driven applications that aid our investment
+  and operations teams to make informed decisions
+•	Develop interfaces to process financial data feeds (real time and batch) from
+  multiple vendors
+•	Work with business analysts, QA engineers and operations engineers to plan,
+  design, test and deploy applications
+•	Evaluate/recommend various tools and technologies to build/enhance our
+  application architecture and processes
+
+Tools & Technologies we use
+
+•	Languages: C#, SQL, JavaScript, Python
+•	Databases: SQL Server, Redis, PostgreSQL
+•	Web development: JQuery, JQWidgets, Knockout, React, Node
+•	Other: SVN, Teamcity (CI), Redgate (SQL), Octopus (Deployment)
+
+We prefer that you
+
+•	Have a bachelor's degree in Computer Science, Engineering or equivalent
+•	Live in or near Orange County (no remote applicants)
+
+We provide a great work environment, generous benefits, and opportunities to
+learn and grow. If you would like to be considered for this position, please
+apply as instructed.
