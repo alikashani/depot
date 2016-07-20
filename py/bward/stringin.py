@@ -11,6 +11,7 @@ print(['-'.join(a.split())])
 ls = os.listdir('.') # list of cwd items
 json_f = 'schema.json' # json file to parse
 arr = ['four', 'two', 'three', 'forty-two']
+lst = [2, 1, 44, 32, 25, 33, 3, 3, 6, 2, 5, 3, 2, 5, 2, 2, 2, 2, 1, 5, 26]
 
 # TODO decorators
 def json_print(filename):
@@ -35,7 +36,7 @@ def set_practice():
     print heyo
 
 def makeDictFromArray(array):
-    d = set([])
+    d = set()
     for x in array:
         d.add(x)
     return d
@@ -60,3 +61,8 @@ if __name__ == '__main__':
     print( list(map(lambda x: x**2, range(10))) )
     print( [ x**2 for x in range(10) ] )
     print( [ x for x in range(5) if x % 2 == 0 ] )
+    
+    # gets unique values from 'lst', sorts, converts to list,
+    # and returns first value in outer list
+    list_comp = [ list(sorted((set(lst)))) ][0]
+    print list_comp
