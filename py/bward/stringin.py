@@ -61,7 +61,7 @@ if __name__ == '__main__':
     print( list(map(lambda x: x**2, range(10))) )
     print( [ x**2 for x in range(10) ] )
     print( [ x for x in range(5) if x % 2 == 0 ] )
-    
+
     # gets unique values from 'lst', sorts, converts to list,
     # and returns first value in outer list
     list_comp = [ list(sorted((set(lst)))) ][0]
