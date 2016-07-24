@@ -25,8 +25,6 @@ SECRET_KEY = '=!(9$2^bsds(ea-z+r+z8!h^a5x@182g-t6wanz7j6x(rdn_9@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = DEBUG
-
 ALLOWED_HOSTS = ['kashaniali.com']
 
 
@@ -39,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'signups',
 ]
 
 MIDDLEWARE_CLASSES = [
