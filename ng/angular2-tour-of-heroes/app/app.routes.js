@@ -5,21 +5,21 @@ var dashboard_component_1 = require('./dashboard.component');
 var hero_detail_component_1 = require('./hero-detail.component');
 var routes = [
     {
-        path: 'heroes',
-        component: heroes_component_1.HeroesComponent,
+        path: '',
+        redirectTo: '/dashboard',
+        pathMatch: 'full',
     },
     {
         path: 'dashboard',
         component: dashboard_component_1.DashboardComponent,
     },
     {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full',
-    },
-    {
         path: 'detail/:id',
         component: hero_detail_component_1.HeroDetailComponent,
+    },
+    {
+        path: 'heroes',
+        component: heroes_component_1.HeroesComponent,
     },
 ];
 exports.appRouterProviders = [

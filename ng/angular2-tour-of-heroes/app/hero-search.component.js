@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var Observable_1 = require('rxjs/Observable');
+var Rx_1 = require('rxjs/Rx');
 var Subject_1 = require('rxjs/Subject');
 var hero_search_service_1 = require('./hero-search.service');
 var HeroSearchComponent = (function () {
@@ -29,11 +29,11 @@ var HeroSearchComponent = (function () {
             .distinctUntilChanged() // ignore if next search term is same as previous
             .switchMap(function (term) { return term // switch to new observable each time
             ? _this.heroSearchService.search(term)
-            : Observable_1.Observable.of([]); })
+            : Rx_1.Observable.of([]); })
             .catch(function (error) {
             // Todo: real error handling
             console.log(error);
-            return Observable_1.Observable.of([]);
+            return Rx_1.Observable.of([]);
         });
     };
     HeroSearchComponent.prototype.gotoDetail = function (hero) {
