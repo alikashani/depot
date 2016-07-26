@@ -27,6 +27,17 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'kakashani@gmail.com'
+EMAIL_HOST_PASSWORD = 'Cheers31425'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+'''
+----- IF USING GMAIL, YOU WILL NEED TO -----
+    Unlock Captcha to enable Django to send
+    for you: https://accounts.google.com/displayunlockcaptcha
+'''
 
 # Application definition
 
@@ -122,3 +133,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static-in-env', 'static-root')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static-in-proj', 'our-static'),
+    os.path.dirname(os.path.join(BASE_DIR, 'static-in-env')),
+    # '/var/www/static/',
+)
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static-in-env', 'media-root')
