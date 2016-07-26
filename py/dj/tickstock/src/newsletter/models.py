@@ -11,3 +11,6 @@ class SignUp(models.Model):
 
     def __unicode__(self): # __str__ in Python3
         return self.email
+
+class Search(models.Model):
+    search_brand = models.CharField(max_length = 50, blank = True)
