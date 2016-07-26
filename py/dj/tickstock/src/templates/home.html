@@ -1,8 +1,42 @@
-<h1> {{ title }} </h2>
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
 
+{% block head_title %}Welcome | {% endblock %}
 
-<form  method='POST' action=''>
+{% block jumbotron %}
+  <!-- Main component for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <h1 class='text-success'>Sale Finder</h1>
+    <p>My girlfriend likes to shop. She also loves sales, who doesn't? So,
+    I decided to put together a quick app that will scrape popular department
+    store websites looking for sales, promotions, buy one get one, etc.</p>
+    <p>Enter a brand in the field below to see if they have a sale.</p>
+    <div class='input-group'>
+      <span class="input-group-addon bg-success" id="basic-addon1">Brand</span>
+      <input type="text" class="form-control" placeholder="Favorite brand here" aria-describedby="basic-addon1 basic-addon2">
+      <span class="input-group-addon btn-primary btn" type='submit' id="basic-addon2">Search</span>
+    </div>
+    <!-- TODO add a checklist of popular stores to choose from instead of search -->
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<h1 class='text-danger'>App Under Construction</h2>
+<h4 class='text-primary'>Things to be added:</h4>
+<ul class='list-style'>
+  <li>Checklist of brands for multiple brand searches</li>
+  <li>More detailed descriptions of results</li>
+  <li>Happy hour search!</li>
+</ul>
+
+<h4 class='text-primary'>What else should I add? Let me know below!</h4>
+<form method='POST' action=''>
   {% csrf_token %}
-  {{ form.as_p }}
-  <input type='submit' value='Sign Up'/>
+  {{ form|crispy }}
+  <p><strong>Suggestion</strong></p>
+  <textarea class='form-control' rows='3'></textarea>
+  <br/>
+  <input class='btn btn-primary' type='submit' value='Sign Up'/>
 </form>
+{% endblock %}

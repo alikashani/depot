@@ -3,3 +3,5 @@ include/
 bin/
 settings.py
 admin/
+our-static/
+static-in-env/
