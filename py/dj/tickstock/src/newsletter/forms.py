@@ -13,7 +13,7 @@ class ContactForm(forms.Form):
 class SignUpForm(forms.ModelForm):
     class Meta:
         model = SignUp
-        fields = ['email', 'full_name']
+        fields = ['full_name', 'email']
 
     def clean_email(self):
         email = self.cleaned_data.get('email')

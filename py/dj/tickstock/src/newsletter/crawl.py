@@ -42,7 +42,7 @@ def spider(url, word, max_pages):
             pages_to_visit = pages_to_visit + links
             print('SUCCESS!!!')
         except Exception as err:
-            print(' ----FAILED---- ')
+            print(' ------------FAILED---------- ')
             print err
 
     if found_word:
