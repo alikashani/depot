@@ -13,4 +13,4 @@ class SignUp(models.Model):
         return self.email
 
 class Search(models.Model):
-    search_brand = models.CharField(max_length = 50, blank = True)
+    user_search = models.CharField(max_length = 50, blank = True)
