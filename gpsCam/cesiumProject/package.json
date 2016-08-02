@@ -1,0 +1,14 @@
+{
+  "name": "azapa-map",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raw Technology Solutions",
+  "license": "ISC",
+  "dependencies": {
+    "cesium": "^1.23.0"
+  }
+}

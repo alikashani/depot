@@ -8,3 +8,5 @@ aws_users.json
 *.zip
 coursera/
 py/workspace/
+Cesium-1.23/
+Try-Django-1.8/

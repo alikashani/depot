@@ -14,3 +14,6 @@ class SignUp(models.Model):
 
 class Search(models.Model):
     user_search = models.CharField(max_length = 50, blank = True)
+
+    def __unicode__(self):
+        return self.user_search

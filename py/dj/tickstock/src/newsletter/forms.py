@@ -3,10 +3,10 @@ from django import forms
 from .models import SignUp
 
 class SearchForm(forms.Form):
-    searched_name = forms.CharField(required=True)
+    searched_name = forms.CharField(required = True)
 
 class ContactForm(forms.Form):
-    full_name = forms.CharField(required=False)
+    full_name = forms.CharField(required = False)
     email = forms.EmailField()
     message = forms.CharField()
 
