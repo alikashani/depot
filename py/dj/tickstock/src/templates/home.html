@@ -4,80 +4,110 @@
 {% block head_title %}Welcome | {% endblock %}
 
 <style>
-{% block style %}
-{% endblock %}
+  {% block style %}
+    .navbar-static-top {
+      margin-bottom: 0 !important;
+    }
+    .jumbotron {
+      background-color: #337ab7;
+      color: #eee;
+    }
+    .lead {
+      text-align:center;
+    }
+  {% endblock %}
 </style>
 
+<!-- MAIN MARKETING MESSAGE -->
 {% block jumbotron_content %}
-<!-- Main component for a primary marketing message or call to action -->
-<div class="jumbotron">
-  <div class="row">
-    <div class="col-sm-6">
-      <!-- BUSINESS -->
-      <h1 class='text-success'>Sale Finder</h1>
-      <p>My girlfriend likes to shop. She also loves sales, who doesn't? So,
-      I decided to put together a quick app that will scrape popular department
-      store websites looking for sales, promotions, buy one get one, etc.</p>
-      <p>Enter a brand in the field below to see if they have a sale.</p>
-      <!-- VIDEO -->
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <!-- Business Line -->
+        <div class="col-sm-8 col-sm-offset-2">
+          <h1 class='text-success'><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Sale Finder</h1>
+          <p>My girlfriend likes to shop. She also loves sales, who doesn't? So,
+          I decided to put together a quick app that will scrape popular department
+          store websites looking for sales, promotions, buy one get one, etc.</p>
+          <p>Enter a brand in the field below to see if they have a sale.</p>
+        </div>
+        <!-- Image -->
+        <!-- <div class="col-sm-6" style="background-color:black; height:300px;">
+        </div> -->
+
+        <!-- Search Bar -->
+        <div class='input-group col-md-8 col-md-offset-2'>
+          <span class="input-group-addon bg-success" id="basic-addon1">Brand</span>
+          <input type="text" class="form-control" placeholder="Favorite brand here" aria-describedby="basic-addon1 basic-addon2">
+          <span class="input-group-addon btn-primary btn" type='submit' id="basic-addon2">Search</span>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-6" style="background-color:black;height:300px;">
-    </div>
-    <div class='input-group col-md-12'>
-      <span class="input-group-addon bg-success" id="basic-addon1">Brand</span>
-      <input type="text" class="form-control" placeholder="Favorite brand here" aria-describedby="basic-addon1 basic-addon2">
-      <span class="input-group-addon btn-primary btn" type='submit' id="basic-addon2">Search</span>
-    </div>
+    <!-- TODO add a checklist of popular stores to choose from instead of search -->
   </div>
-  <!-- TODO add a checklist of popular stores to choose from instead of search -->
-</div>
 {% endblock %}
 
+<!-- SECONDARY INFORMATION -->
 {% block content %}
+  {% if request.user.is_authenticated %}
+    <h1 class="text-center">You are logged in!</h1>
 
-<div class='row bordered'>
-  <div class='col-sm-3 pull-right'>
-    <h4 class='text-primary'>What else should I add? Let me know below!</h4>
-    <form method='POST' action=''>
-      {% csrf_token %}
-      {{ form|crispy }}
-      <p><strong>Suggestion</strong></p>
-      <textarea class='form-control' rows='3'></textarea>
-      <br/>
-      <input class='btn btn-primary' type='submit' value='Sign Up'/>
-    </form>
-  </div>
+    {% if queryset %}
+      <h2>Welcome Staff Member {{request.user}}</h2>
+      <table class="table">
+        {% for instance in queryset %}
+          <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ instance }}</td>
+            <td>{{ instance.full_name }}</td>
+            <td>{{ instance.timestamp|timesince }} ago</td>
+          </tr>
+        {% endfor %}
+      </table>
+    {% endif %}
 
-  <div class="col-sm-3">
+  {% else %}
+    <div class='row'>
+      <!-- Information -->
+      <div class='col-sm-5 col-sm-offset-1 bordered'>
+        <h1 class='text-danger'>App Under Construction</h2>
+        <h4 class='text-primary'>Things to be added:</h4>
+        <ul class='list-style'>
+          <li>Checklist of brands for multiple brand searches</li>
+          <li>More detailed descriptions of results</li>
+          <li>Happy hour search!</li>
+        </ul>
+      </div>
+      <!-- Suggestion Form -->
+      <div class='col-sm-3 col-sm-offset-2 bordered'>
+        <h4 class='text-primary'>What else should I add?</h4>
+        <h4 class='text-primary'>Let me know below!</h4>
+        <form method='POST' action=''>
+          {% csrf_token %}
+          {{ form|crispy }}
+          <p><strong>Suggestion</strong></p>
+          <textarea class='form-control' rows='3'></textarea>
+          <br/>
+          <input class='btn btn-primary' type='submit' value='Sign Up'/>
+        </form>
+      </div>
+    </div>
+  {% endif %}
+
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+  <div class="col-sm-4">
     <p class="lead">Built with Django &amp; Bootstrap</p>
   </div>
 
-  <div class="col-sm-3">
+  <div class="col-sm-4">
     <p class="lead">Created for the smart shopper.</p>
   </div>
 
-  <div class="col-sm-3">
+  <div class="col-sm-4">
     <p class="lead">Always Open Source</p>
-  </div>
-
-</div>
-
-
-
-
-
-<br/>
-<br/>
-<br/>
-<br/>
-<!-- Information & Suggestion Form -->
-<div class='row bordered'>
-  <h1 class='text-danger'>App Under Construction</h2>
-    <h4 class='text-primary'>Things to be added:</h4>
-    <ul class='list-style'>
-      <li>Checklist of brands for multiple brand searches</li>
-      <li>More detailed descriptions of results</li>
-      <li>Happy hour search!</li>
-    </ul>
   </div>
 {% endblock %}
