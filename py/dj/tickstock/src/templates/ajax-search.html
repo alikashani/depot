@@ -1,0 +1,9 @@
+{% if signups.count > 0 %}
+
+  {% for signup in signups %}
+    <li> <a href='/signups/get/{{ signup.email }}/'>{{ signup.full_name }}</a></li>
+  {% endfor %}
+
+{% else %}
+  <li>None to show!</li>
+{% endif %}

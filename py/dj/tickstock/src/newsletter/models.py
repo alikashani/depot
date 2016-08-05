@@ -13,7 +13,7 @@ class SignUp(models.Model):
         return self.email
 
 class Search(models.Model):
-    user_search = models.CharField(max_length = 50, blank = True)
+    search_text = models.CharField(max_length = 120, blank = True)
 
     def __unicode__(self):
-        return self.user_search
+        return self.search_text

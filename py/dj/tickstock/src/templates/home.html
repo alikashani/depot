@@ -30,17 +30,19 @@
           I decided to put together a quick app that will scrape popular department
           store websites looking for sales, promotions, buy one get one, etc.</p>
           <p>Enter a brand in the field below to see if they have a sale.</p>
+          <h1>{{ search_res }}</h1>
         </div>
-        <!-- Image -->
+        <!-- Image / Video Space -->
         <!-- <div class="col-sm-6" style="background-color:black; height:300px;">
         </div> -->
 
         <!-- Search Bar -->
-        <div class='input-group col-md-8 col-md-offset-2'>
-          <span class="input-group-addon bg-success" id="basic-addon1">Brand</span>
+        <form class='input-group col-md-8 col-md-offset-2' method='POST' action=''>
+          <span class="input-group-addon bg-success" id="basic-addon1">Query</span>
           <input type="text" class="form-control" placeholder="Favorite brand here" aria-describedby="basic-addon1 basic-addon2">
+          {% csrf_token %}
           <span class="input-group-addon btn-primary btn" type='submit' id="basic-addon2">Search</span>
-        </div>
+        </form>
       </div>
     </div>
     <!-- TODO add a checklist of popular stores to choose from instead of search -->
@@ -50,10 +52,9 @@
 <!-- SECONDARY INFORMATION -->
 {% block content %}
   {% if request.user.is_authenticated %}
-    <h1 class="text-center">You are logged in!</h1>
-
     {% if queryset %}
-      <h2>Welcome Staff Member {{request.user}}</h2>
+      <h4 class='text-success pull-right'>You have admin rights.</h4>
+      <h2>Welcome, {{request.user}}.</h2>
       <table class="table">
         {% for instance in queryset %}
           <tr>
@@ -93,6 +94,16 @@
       </div>
     </div>
   {% endif %}
+
+  <!-- Ajax Response -->
+  <div class='row'>
+    <h2 class='col-sm-2'>Search</h2>
+    <form class='col-md-6' method='POST' action=''>
+      {% csrf_token %}
+      {{ search_form|crispy }}
+    </form>
+  </div>
+
 
   <br/>
   <br/>

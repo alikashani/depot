@@ -1,9 +1,16 @@
 from django import forms
 
-from .models import SignUp
+from .models import SignUp, Search
 
-class SearchForm(forms.Form):
-    searched_name = forms.CharField(required = True)
+class SearchForm(forms.ModelForm):
+    class Meta:
+        model = Search
+        fields = ['search_text']
+
+    def clean_search_text(self):
+        search_text = self.cleaned_data.get('search_text')
+        # TODO -- Add in necessary validation here
+        return search_text
 
 class ContactForm(forms.Form):
     full_name = forms.CharField(required = False)

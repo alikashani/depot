@@ -42,12 +42,12 @@ def spider(url, word, max_pages):
             pages_to_visit = pages_to_visit + links
             print('SUCCESS!!!')
         except Exception as err:
-            print(' ------------FAILED---------- ')
+            print(' ------------ FAILED ----------- ')
             print err
 
     if found_word:
         print('The word ', word, ' was found at ', url)
     else:
-        print('Word never found')
+        print('Word never found!')
 
-spider('http://www.hm.com/us/department/sale', 'sale', 200)
+print ('**** END OF WEB CRAWL SCRIPT ****')
